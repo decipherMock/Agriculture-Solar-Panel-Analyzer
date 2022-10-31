@@ -93,7 +93,7 @@
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content" style="background-color:white;border:3px solid black;">
 								<div class="forecast-icon">
-									<img src="images/hum.jpeg" alt="" width=60>
+									<img src="images/34.gif" alt="" width=60>
 								</div>
 								<div class="degree"><iframe style="border:none;" width="140" height="180" src="https://thingspeak.com/channels/1914140/widgets/539867"></iframe></div>
 								<small style="font-size: 15px;">%</small>
@@ -140,7 +140,7 @@
 					<div class="card">
 					
 					  <div class="card-body">
-						<h2 class="card-title" style="color: black;">Environment Humidity Reading</h2>
+						<h2 class="card-title" style="color: black;">Environment Humidity.</h2>
 						<canvas id="myChart2" width="600" height="500"></canvas>
 					  </div>
 					  
@@ -150,7 +150,7 @@
 					  <div class="card-body">
 						<h2 class="card-title" style="color: black;" class="card-title">Environment
 							Temperature</h2>
-						<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1914140/widgets/539903"></iframe>
+							<canvas id="myChart3" width="600" height="500"></canvas>
 					  </div>
 					  
 					</div>
@@ -158,8 +158,8 @@
 				
 						<div class="card-body">
 						  <h2 class="card-title" style="color: black;" class="card-title">
-							  Sun Humidity</h2>
-							  <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1914140/widgets/539917"></iframe>
+							Sun light intensity</h2>
+							<canvas id="myChart4" width="600" height="500"></canvas>
 						</div>
 						
 					  </div>
@@ -259,6 +259,88 @@
 			<script>
 				const ctx2 = document.getElementById('myChart2');
 			    const myChart2 = new Chart(ctx2, {
+				type: 'line',
+				data: {
+					labels: ['Monday', 'Tuesday', 'Wensday', 'Thursday', 'Friday', 'Saturday'],
+					datasets: [{
+						label: '# Generated Voltage Readings',
+						data: [1266, 16009, 3321, 5000, 22100, 34500],
+						backgroundColor: [
+							'rgba( 255, 87, 51 )',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(75, 192, 192, 0.2)',
+							'rgba(153, 102, 255, 0.2)',
+							'rgba(255, 159, 64, 0.2)'
+						],
+						borderColor: [
+							'rgba(255, 99, 132, 1)',
+							'rgba(54, 162, 235, 1)',
+							'rgba(255, 206, 86, 1)',
+							'rgba(75, 192, 192, 1)',
+							'rgba(153, 102, 255, 1)',
+							'rgba(255, 159, 64, 1)'
+						],
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			</script>
+
+
+
+
+			<script>
+				const ctx3 = document.getElementById('myChart3');
+			    const myChart3 = new Chart(ctx3, {
+				type: 'line',
+				data: {
+					labels: ['Monday', 'Tuesday', 'Wensday', 'Thursday', 'Friday', 'Saturday'],
+					datasets: [{
+						label: '# Generated Voltage Readings',
+						data: [1266, 16009, 3321, 5000, 22100, 34500],
+						backgroundColor: [
+							'rgba( 255, 87, 51 )',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(75, 192, 192, 0.2)',
+							'rgba(153, 102, 255, 0.2)',
+							'rgba(255, 159, 64, 0.2)'
+						],
+						borderColor: [
+							'rgba(255, 99, 132, 1)',
+							'rgba(54, 162, 235, 1)',
+							'rgba(255, 206, 86, 1)',
+							'rgba(75, 192, 192, 1)',
+							'rgba(153, 102, 255, 1)',
+							'rgba(255, 159, 64, 1)'
+						],
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			</script>
+
+
+
+
+			<script>
+				const ctx4 = document.getElementById('myChart4');
+			    const myChart4 = new Chart(ctx4, {
 				type: 'line',
 				data: {
 					labels: ['Monday', 'Tuesday', 'Wensday', 'Thursday', 'Friday', 'Saturday'],
