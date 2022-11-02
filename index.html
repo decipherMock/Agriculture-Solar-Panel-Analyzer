@@ -171,6 +171,22 @@
 							<h2>0</h2>
 						</div>
 						
+
+
+						
+					  </div>
+
+					  <div class="card">
+				
+						<div class="card-body">
+						  <h2 class="card-title" style="color: black;" class="card-title">
+							Solar Panel Voltage Level</h2>
+							<canvas id="myChart5" width="600" height="500"></canvas>
+						</div>
+						
+
+
+						
 					  </div>
 				  </div>
 
@@ -342,6 +358,54 @@
 			<script>
 				const ctx4 = document.getElementById('myChart4');
 			    const myChart4 = new Chart(ctx4, {
+				type: 'line',
+				data: {
+					labels: ['Monday', 'Tuesday', 'Wensday', 'Thursday', 'Friday', 'Saturday'],
+					datasets: [{
+						label: '# Generated Voltage Readings',
+						data: [1266, 16009, 3321, 5000, 22100, 34500],
+						backgroundColor: [
+							'rgba( 255, 87, 51 )',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(75, 192, 192, 0.2)',
+							'rgba(153, 102, 255, 0.2)',
+							'rgba(255, 159, 64, 0.2)'
+						],
+						borderColor: [
+							'rgba(255, 99, 132, 1)',
+							'rgba(54, 162, 235, 1)',
+							'rgba(255, 206, 86, 1)',
+							'rgba(75, 192, 192, 1)',
+							'rgba(153, 102, 255, 1)',
+							'rgba(255, 159, 64, 1)'
+						],
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			</script>
+
+
+
+
+
+
+
+
+
+
+
+			<script>
+				const ctx5 = document.getElementById('myChart5');
+			    const myChart5 = new Chart(ctx5, {
 				type: 'line',
 				data: {
 					labels: ['Monday', 'Tuesday', 'Wensday', 'Thursday', 'Friday', 'Saturday'],
